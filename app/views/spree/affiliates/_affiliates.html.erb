@@ -1,0 +1,23 @@
+<div class="account-my-affiliates" data-hook="affiliates">
+  <h3><%= t(:affiliates_signed_up) %></h3>
+
+  <strong>
+    <%= t('affiliate_link') %>
+  </strong>
+  <%= link_to_referral_url(@user) %>
+
+  <% if @affiliates.present? %>
+    <table>
+      <thead id="my-affiliates">
+        <tr>
+          <th><%= t(:affiliate_email) %></th>
+          <th><%= t(:affiliation_date) %></th>
+        </tr>
+      </thead>
+      <tbody><%= render @affiliates %></tbody>
+    </table>
+  <% else %>
+    <p><%= t(:no_affiliates_yet) %></p>
+
+  <% end %>
+</div>
