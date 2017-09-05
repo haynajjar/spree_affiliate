@@ -1,5 +1,5 @@
 Spree::BaseController.class_eval do
-  before_filter :remember_affiliate
+  before_action :remember_affiliate
 
   private
   
